@@ -1,0 +1,14 @@
+@import "index";
+@import "archive-project/archive-project";
+@import "single-project/single-project";
+@import "pagination";
+@import "home/home";
+
+main{
+    padding: 50px 0;
+    margin-left: $header-width;
+
+    @include media-breakpoint-down(md){
+        margin-left: 0;
+    }
+}

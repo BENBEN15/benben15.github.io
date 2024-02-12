@@ -1,0 +1,55 @@
+h1{
+    font-size: 50px;
+    font-family: $font-roboto-thin;
+}
+
+h2{
+    font-size: 40px;
+    font-family: $font-roboto-thin;
+}
+
+h3{
+    font-size: 30px;
+    font-family: $font-raleway-bold;
+}
+
+h4{
+    font-size: 25px;
+    font-family: $font-raleway-regular;
+}
+
+h5{
+    font-size: 20px;
+}
+
+h6{
+    font-size: 16px;
+}
+
+.size1{font-size: 50px;}
+.size2{font-size: 40px;}
+.size3{font-size: 30px;}
+.size4{font-size: 25px;}
+.size5{font-size: 20px;}
+.size6{font-size: 16px;}
+
+a{
+    color: unset;
+    text-decoration: none;
+    transition: $default-transition;
+}
+
+@each $name, $color in $colors {
+    .text-#{$name} {
+        color: $color;
+    }
+}
+
+@each $name, $color in $colors {
+    .hover-text-#{$name} {
+        transition: $default-transition;
+        &:hover{
+            color: $color !important;
+        }
+    }
+}

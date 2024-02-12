@@ -1,0 +1,20 @@
+
+//Roboto
+@include font-face('Roboto Regular','./fonts/Roboto/Roboto-Regular', normal, normal, ttf);
+$font-roboto-regular : 'Roboto Regular', sans-serif;
+
+@include font-face('Roboto Thin','./fonts/Roboto/Roboto-Thin', normal, normal, ttf);
+$font-roboto-thin : 'Roboto Thin', sans-serif;
+
+@include font-face('Roboto Bold','./fonts/Roboto/Roboto-Bold', normal, normal, ttf);
+$font-roboto-bold : 'Roboto Bold', sans-serif;
+
+//Raleway
+@include font-face('Raleway Regular','./fonts/Raleway/Raleway-Regular', normal, normal, ttf);
+$font-raleway-regular : 'Raleway Regular', sans-serif;
+
+@include font-face('Raleway Thin','./fonts/Raleway/Raleway-Thin', normal, normal, ttf);
+$font-raleway-thin : 'Raleway Thin', sans-serif;
+
+@include font-face('Raleway Bold','./fonts/Raleway/Raleway-Bold', normal, normal, ttf);
+$font-raleway-bold : 'Raleway Bold', sans-serif;

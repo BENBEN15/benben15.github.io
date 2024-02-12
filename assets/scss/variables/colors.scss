@@ -1,0 +1,28 @@
+$font-color: #f5f5f5;
+$primary-color: #1C315E;
+$secondary-color: #1F4087;
+$tertiary-color: #0F327D;
+$pop-color: #50cc1b;
+$secondary-pop-color: #88A47C;
+$light: #f5f5f5;
+$dark: #3F3F3F;
+$bg-color: #F4F4F4;
+$white: #FFFFFF;
+$black: #000000;
+
+$default-gradient: linear-gradient(130deg, rgba(28,49,94,1) 0%, rgba(15,50,125,1) 100%);
+$default-gradient-backwards: linear-gradient(130deg, rgba(15,50,125,1) 0%, rgba(28,49,94,1) 100%);
+
+$colors: (
+        'font-color': $font-color,
+        'primary-color': $primary-color,
+        'secondary-color': $secondary-color,
+        'tertiary-color': $tertiary-color,
+        'pop-color': $pop-color,
+        'secondary-pop-color': $secondary-pop-color,
+        'light': $light,
+        'dark': $dark,
+        'bg-color': $bg-color,
+        'white': $white,
+        'black': $black
+);

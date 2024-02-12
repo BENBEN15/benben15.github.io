@@ -1,0 +1,60 @@
+.pagination{
+    display: flex;
+    justify-content: center;
+    perspective: 1000px;
+
+    span{
+        color: $pop-color !important;
+        background-color: $tertiary-color!important;
+        font-weight: bold;
+        border: solid 2px $pop-color!important;
+    }
+
+    .page-numbers{
+        display: flex;
+        padding: 10px 20px;
+        margin: 0 -10px;
+        align-items: center;
+        color: $dark;
+        font-family: $font-raleway-regular;
+        font-size: 18px;
+        background-color: $white;
+        box-shadow: $default-box-shadow;
+        transition: $default-transition;
+        transform: rotateY(60deg);
+        transform-style: preserve-3d;
+        border: solid 2px $dark;
+
+        &:hover,&:focus{
+            transform: rotateY(0deg);
+            margin: 0 10px;
+        }
+
+        &.next{
+            box-shadow: none;
+            background-color: transparent;
+            padding: 5px!important;
+            margin: 0 0 0 20px!important;
+            transform: rotateY(0deg)!important;
+            color: $white !important;
+            border: none;
+            &:hover{
+                color: $pop-color!important;
+                background-color: $tertiary-color;
+            }
+        }
+        &.prev{
+            box-shadow: none;
+            background-color: transparent;
+            padding: 5px!important;
+            margin: 0 25px 0 0!important;
+            transform: rotateY(0deg)!important;
+            color: $white !important;
+            border: none;
+            &:hover{
+                color: $pop-color!important;
+                background-color: $tertiary-color;
+            }
+        }
+    }
+}

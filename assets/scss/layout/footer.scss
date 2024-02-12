@@ -1,0 +1,66 @@
+footer{
+    padding: 10px 0;
+    background-color: rgba($dark, .2);
+    backdrop-filter: blur(15px);
+    box-shadow: $box-shadow;
+    width: 100%;
+    font-family: $font-raleway-thin;
+    font-size: 12px;
+
+    padding-left: $header-width;
+    @include media-breakpoint-down(md){
+        padding-left: 0;
+    }
+
+    .footer-label{
+        font-size: 14px;
+        font-family: $font-raleway-bold;
+        a{
+            transition: $transition-base;
+            font-family: $font-raleway-thin;
+            color: $pop-color;
+            font-weight: bold;
+            font-size: 16px;
+            &:hover{
+                @include text-glowing-effect($pop-color);
+            }
+        }
+    }
+
+    ul{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+
+        @include media-breakpoint-down(sm){
+            justify-content: center;
+            flex-wrap: wrap;
+
+            li{
+                padding: 10px !important;
+            }
+        }
+
+        li{
+            padding: 10px;
+
+            &:first-child{
+                padding-left: 0;
+            }
+
+            &:last-child{
+                padding-right: 0;
+            }
+
+            a{
+                font-weight: bold;
+                transition: $transition-base;
+                &:hover{
+                    color: $pop-color;
+                    @include text-glowing-effect($pop-color);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+.single-projet-banner{
+    text-align: center;
+
+    /*.categories{
+        padding: 5px 15px;
+        box-shadow: $subtle-box-shadow;
+        background-color: $tertiary-color;
+        font-family: $font-roboto-bold;
+        span{
+            padding: 0 5px;
+        }
+        .cat-separator{
+            font-size: 20px;
+            color: $pop-color;
+        }
+    }*/
+
+    p{
+        font-family: $font-raleway-bold;
+    }
+
+    hr{
+        width: 50%;
+        background-color: $white;
+        height: 1px;
+        opacity: 1;
+    }
+}

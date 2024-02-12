@@ -1,0 +1,50 @@
+body {
+    position: relative;
+    background: $secondary-color;
+    min-height: 100vh;
+
+    //Typo
+    color: $font-color;
+    font-size: 16px;
+    font-family: $font-roboto-regular;
+
+    .body-shape{
+        position: fixed;
+        bottom: -25%;
+        height: 150%;
+        width: 150px;
+        transform: rotate(28deg);
+        z-index: -1;
+
+        &.body-shape-1{
+            background-color: $primary-color;
+            width: 75px;
+            box-shadow: $subtle-box-shadow;
+        }
+        &.body-shape-2{
+            background-color: $tertiary-color;
+            width: 125px;
+            box-shadow: $subtle-box-shadow;
+        }
+        &.body-shape-3{
+            background-color: $primary-color;
+            width: 200px;
+            box-shadow: $subtle-box-shadow;
+        }
+        &.body-shape-4{
+            background-color: $pop-color;
+            width: 1px;
+            box-shadow: 0 0 6px 2px $pop-color;
+        }
+
+        @include standard-background-animation()
+    }
+
+    &.single{
+        .body-shape{
+            @include single-background-animation()
+        }
+    }
+
+}
+

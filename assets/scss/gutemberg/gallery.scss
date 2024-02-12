@@ -1,0 +1,39 @@
+.wp-block-gallery,.wp-block-image{
+    figure{
+        position: relative!important;
+        transition: $bezier-transition;
+
+        img{
+            transition: $bezier-transition;
+        }
+
+        figcaption{
+            position: absolute!important;
+            bottom: 0;
+            margin: 0!important;
+            padding: 15px 10px!important;
+            height: min-content;
+            background-color: $secondary-color!important;
+            color: $font-color;
+            font-family: $font-raleway-bold;
+            font-size: 16px!important;
+            transition: $bezier-transition;
+        }
+
+        &.wp-lightbox-container:hover,&:focus{
+            z-index: 1;
+            transform: scale(1.1);
+
+            img{
+                //filter: blur(2px);
+            }
+
+            figcaption{
+                background: none!important;
+                background-color: $secondary-color!important;
+                bottom: 50%!important;
+                transform: translateY(50%)!important;
+            }
+        }
+    }
+}

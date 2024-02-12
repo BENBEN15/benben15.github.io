@@ -1,0 +1,91 @@
+.card-project{
+    $card-transition: .35s all cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+    box-shadow: $subtle-box-shadow;
+    font-family: $font-raleway-bold;
+    transition: $default-transition;
+    overflow: hidden;
+
+    img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+        transition: $bezier-transition;
+        background-color: $bg-color;
+    }
+
+    .card-overlay{
+        position: relative;
+        z-index: 1;
+        height: auto;
+        width: 100%;
+        .card-text{
+            width: 100%;
+            padding: 10px 20px;
+            background-color: $primary-color;
+            box-shadow: $subtle-box-shadow;
+            transition: $bezier-transition;
+
+            .categories{
+                color: $font-color;
+                .cat-separator{
+                    color: $pop-color!important;
+                    @include text-glowing-effect($pop-color)
+                }
+            }
+            h3{
+                color: $white;
+            }
+            p{
+                color: $font-color;
+            }
+        }
+    }
+
+    &:hover, &:focus{
+        img{
+            transform: scale(1.2);
+
+        }
+        .card-overlay{
+            .card-text{
+                background-color: $font-color;
+                box-shadow: $subtle-box-shadow;
+                .categories{
+                    color: $primary-color;
+                }
+                h3{
+                    color: $primary-color;
+                }
+                p{
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+
+    @include media-breakpoint-down(md){
+        .card-overlay{
+            .card-text{
+                padding: 5px 10px;
+                height: 100%;
+                transform: scaleY(1)!important;
+                .categories{
+                    padding-bottom: 5px;
+                    font-size: 12px;
+                }
+                h3{
+                    font-size: 18px;
+                }
+                p{
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,19 @@
+.wp-block-button__link{
+    border-radius: 0;
+    color: $dark;
+    font-size: 16px;
+    font-family: $font-raleway-bold;
+
+    background: $font-color;
+    background: linear-gradient(to left, $font-color 50%, $pop-color 50%);
+    background-size: 200% 100%;
+    background-position:right bottom;
+    float:right;
+    transition: $transition-base;
+
+    &:hover {
+        color: $font-color;
+        background-position:left bottom;
+        @include glowing-effect($pop-color)
+    }
+}

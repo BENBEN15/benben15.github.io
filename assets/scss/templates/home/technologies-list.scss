@@ -1,0 +1,95 @@
+.technologies-list{
+
+    $square-size: 150px;
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(7, $square-size);
+        grid-gap: 20px;
+
+        .grid-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: $square-size;
+            height: $square-size;
+
+            &.colored-box{
+                //border: 1px solid $white;
+                &::after {
+                    content: "";
+                    display: block;
+                    width: 80%;
+                    height: 80%;
+                    background: $default-gradient;
+                    box-shadow: $subtle-box-shadow;
+
+                }
+            }
+
+            &.text-inside{
+                flex-direction: column;
+                color: $font-color;
+                font-size: 16px;
+                font-family: $font-raleway-bold;
+                transition: $default-transition;
+                box-shadow: $subtle-box-shadow;
+
+                @include glassdoor-effect();
+
+                img{
+                    height: calc($square-size / 2);
+                    width: calc($square-size / 2);
+                    object-fit: contain;
+                    margin-bottom: 5px;
+                }
+            }
+
+            &.not-visible {
+                visibility: hidden;
+            }
+
+            &.last-box{
+                @include glassdoor-effect();
+            }
+        }
+    }
+
+    @include media-breakpoint-down(xl){
+        .grid-container {
+            grid-template-columns: repeat(5, $square-size);
+            .grid-item {
+                &.not-visible {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    @include media-breakpoint-down(lg){
+        .grid-container {
+            grid-template-columns: repeat(3, $square-size);
+            .grid-item {
+                &.last-box{
+                    display: none;
+                }
+            }
+        }
+    }
+
+    @include media-breakpoint-down(md){
+        .grid-container {
+            grid-template-columns: repeat(3, 100px);
+            .grid-item {
+                width: 100px;
+                height: 100px;
+                &.text-inside{
+                    img{
+                        height: 50px;
+                        width: 50px;
+                    }
+                }
+            }
+        }
+    }
+}

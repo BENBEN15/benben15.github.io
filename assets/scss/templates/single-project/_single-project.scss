@@ -1,0 +1,10 @@
+.single-projet{
+    @import "single-projet-banner";
+
+    .gallery_wrapper{
+        margin: 0 20%!important;
+        @include media-breakpoint-down(sm){
+            margin: 0!important;
+        }
+    }
+}

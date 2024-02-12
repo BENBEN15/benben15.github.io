@@ -1,0 +1,51 @@
+.feature-section{
+    .home-project-list{
+        list-style-type: none;
+
+        .home-project{
+            a{
+                position: relative;
+                display: flex;
+                height: 100%;
+                width: 100%;
+                overflow: hidden;
+
+                img{
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    transition: $bezier-transition;
+                }
+
+                .home-project-overlay{
+                    position: absolute;
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+                    width: 100%;
+                    background-color: rgba($black,0.6);
+                    transition: $transition-base;
+                    opacity: 0;
+
+                    h3{
+                        font-size: 24px;
+                        font-family: $font-raleway-regular;
+                        text-align: center;
+                        width: 100%;
+                        padding: 10px 5px;
+                        background: $default-gradient;
+                    }
+                }
+
+                &:hover{
+                    img{
+                        transform: scale(1.2);
+                    }
+                    .home-project-overlay{
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}

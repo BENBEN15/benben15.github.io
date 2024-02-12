@@ -1,0 +1,212 @@
+//Got from : https://gist.github.com/jonathantneal/d0460e5c2d5d7f9bc5e6
+
+// =============================================================================
+// String Replace
+// =============================================================================
+
+@function str-replace($string, $search, $replace: "") {
+    $index: str-index($string, $search);
+
+    @if $index {
+        @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+    }
+
+    @return $string;
+}
+
+// =============================================================================
+// Font Face
+// =============================================================================
+
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+    $src: null;
+
+    $extmods: (
+            eot: "?",
+            svg: "#" + str-replace($name, " ", "_")
+    );
+
+    $formats: (
+            otf: "opentype",
+            ttf: "truetype"
+    );
+
+    @each $ext in $exts {
+        $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+        $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+        $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+    }
+
+    @font-face {
+        font-family: quote($name);
+        font-style: $style;
+        font-weight: $weight;
+        src: $src;
+    }
+}
+
+@mixin glowing-effect($color, $intensity: 3px, $duration: 3s) {
+
+    @keyframes glowing-effect {
+        0%{
+            box-shadow: 0 0 6px 2px $color;
+        }
+        50%{
+            box-shadow: 0 0 6px $intensity $color;
+        }
+        100%{
+            box-shadow: 0 0 6px 2px $color;
+        }
+    }
+
+    animation: $duration linear infinite glowing-effect;
+}
+
+@mixin static-glowing-effect($color, $intensity: 2px) {
+    box-shadow: 0 0 6px $intensity $color;
+}
+
+@mixin text-glowing-effect($color, $duration: 3s) {
+    @keyframes text-glowing-effect {
+        0%{
+            text-shadow: 0 0 10px $color;
+        }
+        50%{
+            text-shadow: 0 0 15px $color;
+        }
+        100%{
+            text-shadow: 0 0 10px $color;
+        }
+    }
+
+    animation: $duration linear infinite text-glowing-effect;
+}
+
+@mixin text-static-glowing-effect($color, $intensity: 15px) {
+    text-shadow: 0 0 $intensity $color;
+}
+
+@mixin standard-background-animation(){
+    &.body-shape-1{
+        animation: .9s ease-in-out forwards bg-shape-1-sliding;
+    }
+    &.body-shape-2{
+        animation: .7s ease-in-out forwards bg-shape-2-sliding;
+    }
+    &.body-shape-3{
+        animation: .5s ease-in-out forwards bg-shape-3-sliding;
+    }
+    &.body-shape-4{
+        animation: 1s ease-in-out forwards bg-shape-4-sliding, 3s linear infinite bg-shape-4-glowing;
+    }
+
+    @keyframes bg-shape-1-sliding {
+        from{
+            left: 0;
+        }
+        to{
+            left: 60%;
+        }
+    }
+    @keyframes bg-shape-2-sliding {
+        from{
+            left: 0;
+        }
+        to{
+            left: 70%;
+        }
+    }
+    @keyframes bg-shape-3-sliding {
+        from{
+            left: 0;
+        }
+        to{
+            left: 85%;
+        }
+    }
+    @keyframes bg-shape-4-sliding {
+        from{
+            left: 100%;
+        }
+        to{
+            left: 50%;
+        }
+    }
+
+    @keyframes bg-shape-4-glowing {
+        0%{
+            box-shadow: 0 0 6px 2px $pop-color;
+        }
+        50%{
+            box-shadow: 0 0 6px 3px $pop-color;
+        }
+        100%{
+            box-shadow: 0 0 6px 2px $pop-color;
+        }
+    }
+}
+
+@mixin single-background-animation(){
+    &.body-shape-1{
+        animation: .9s ease-in-out forwards bg-shape-1-sliding-single !important;
+    }
+    &.body-shape-2{
+        animation: .7s ease-in-out forwards bg-shape-2-sliding-single !important;
+    }
+    &.body-shape-3{
+        animation: .5s ease-in-out forwards bg-shape-3-sliding-single !important;
+    }
+    &.body-shape-4{
+        animation: 1s ease-in-out forwards bg-shape-4-sliding-single, 3s linear infinite bg-shape-4-glowing-single !important;
+    }
+
+    @keyframes bg-shape-1-sliding-single {
+        from{
+            left: 0;
+        }
+        to{
+            left: 25%;
+        }
+    }
+    @keyframes bg-shape-2-sliding-single {
+        from{
+            left: 0;
+        }
+        to{
+            left: 70%;
+        }
+    }
+    @keyframes bg-shape-3-sliding-single {
+        from{
+            left: 0;
+        }
+        to{
+            left: 85%;
+        }
+    }
+    @keyframes bg-shape-4-sliding-single {
+        from{
+            left: 100%;
+        }
+        to{
+            left: 15%;
+        }
+    }
+
+    @keyframes bg-shape-4-glowing-single {
+        0%{
+            box-shadow: 0 0 6px 2px $pop-color;
+        }
+        50%{
+            box-shadow: 0 0 6px 3px $pop-color;
+        }
+        100%{
+            box-shadow: 0 0 6px 2px $pop-color;
+        }
+    }
+}
+
+@mixin glassdoor-effect(){
+    background-color: rgba($dark, .2);
+    backdrop-filter: blur(15px);
+}
