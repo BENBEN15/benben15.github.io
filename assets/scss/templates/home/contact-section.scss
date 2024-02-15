@@ -1,0 +1,190 @@
+.contact-section{
+    .contact-section-frame{
+        padding: 30px 20px;
+        background-color: rgba($dark, .2);
+        backdrop-filter: blur(15px) brightness(1.1);
+        box-shadow: $subtle-box-shadow;
+
+        ul{
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+        }
+
+        .resume{
+            display: flex;
+            flex-direction: column;
+            background-color: $primary-color;
+            box-shadow: $default-box-shadow;
+
+            .resume-overlay{
+                overflow: hidden;
+                position: relative;
+                height: 100%;
+
+                &:before{
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: -5px;
+                    height: 5px;
+                    z-index: 1;
+                    box-shadow: 0px -13px 35px 50px $primary-color;
+                    background-color: $primary-color;
+                }
+
+                img{
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: top;
+                    overflow: hidden;
+                    opacity: .9;
+                    transition: 5s;
+                }
+
+
+
+                @include media-breakpoint-down(lg){
+                    height: 300px;
+                }
+                @include media-breakpoint-down(sm){
+                    height: 250px;
+                }
+            }
+            &:hover{
+                .resume-overlay{
+                    img{
+                        object-position: bottom;
+                    }
+                }
+            }
+
+            .btn-group-resume{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 15px 10px;
+
+                span{
+                    font-size: 20px;
+                    font-family: $font-raleway-regular;
+                }
+
+                a{
+                    margin: 0 10px;
+                }
+
+                @include media-breakpoint-down(lg){
+                    span{
+                        font-size: 15px;
+                    }
+                    a{
+                        font-size: 12px;
+                        padding: 12px 15px;
+                    }
+                }
+
+                @include media-breakpoint-down(md){
+                    flex-wrap: wrap;
+                    span{
+                        padding: 10px;
+                        text-align: center;
+                        width: 100%;
+                    }
+                    a{
+                        margin: 0;
+                        width: 50%;
+                        &:hover{
+                            z-index: 1;
+                        }
+                    }
+                }
+
+                @include media-breakpoint-down(sm){
+                    a{
+                        margin: 10px 0;
+                        width: 100%;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+
+        .contact-links{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+
+            padding-left: 20px;
+            @include media-breakpoint-down(lg){
+                padding: 20px 0;
+            }
+
+            li{
+                background: $default-gradient;
+                box-shadow: $default-box-shadow;
+                transition: $transition-base;
+
+                margin: 20px 0;
+                &:first-child{
+                    margin: 0 0 20px 0;
+                }
+                &:last-child{
+                    margin: 20px 0 0 0;
+                }
+
+                @include media-breakpoint-down(lg){
+                    margin: 10px 0;
+                    &:first-child{
+                        margin: 0 0 10px 0;
+                    }
+                    &:last-child{
+                        margin: 10px 0 0 0;
+                    }
+                }
+
+                &:hover{
+                    filter: brightness(1.2);
+                }
+
+                a{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 20px;
+                    font-size: 20px;
+                    font-family: $font-raleway-regular;
+                    transition: $transition-base;
+
+                    @include media-breakpoint-down(lg){
+                        padding: 10px;
+                        font-size: 15px;
+                    }
+
+                    svg{
+                        transition: $bezier-transition;
+                        margin-right: 10px;
+                        &:hover{
+                            svg{
+                                transform: scale(1.1) rotate(-33deg);
+                            }
+                        }
+                    }
+
+                    &:hover{
+                        color: $pop-color;
+                        @include text-glowing-effect($pop-color);
+
+                        svg{
+                            transform: scale(1.2) rotate(-33deg);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

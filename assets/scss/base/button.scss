@@ -1,5 +1,6 @@
 .btn{
-    display: block;
+    display: flex;
+    align-items: center;
     position: relative;
     width: fit-content;
     padding: 12px 24px;
@@ -14,6 +15,10 @@
     background-position:right bottom;
     //float:right;
     transition: $transition-base;
+
+    svg{
+        padding-right: 5px;
+    }
 
     &:hover {
         color: $font-color;
