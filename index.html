@@ -9,284 +9,312 @@
 </head>
 
 <body class="single">
-<main>
-    <div class="container">
+
+<!--HEADER-->
+<header>
+    <button id="toggleHeader" class="toggle-menu-btn" title="Ouvrir le menu de navigation" aria-label="Ouvrir le menu de navigation">
+        <i data-feather='menu'></i>
+        <i data-feather='x'></i>
+    </button>
+    <nav>
+        <ul>
+            <li>
+                <a class="header-menu-link" href="#qui-suis-je"><i data-feather='user'></i>Qui suis je ?</a>
+            </li>
+            <li>
+                <a class="header-menu-link" href="#mes-formations"><i data-feather='book-open'></i>Mes formations</a>
+            </li>
+            <li>
+                <a class="header-menu-link" href="#mes-competences"><i data-feather='briefcase'></i>Mes compétences</a>
+            </li>
+            <li>
+                <a class="header-menu-link" href="#mes-projets"><i data-feather='code'></i>Mes projets</a>
+            </li>
+            <li>
+                <a class="header-menu-link" href="#me-contacter"><i data-feather='phone'></i>Me contacter</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<main class="mt-5">
+
+<div class="container">
 
 <!--        HOME ENTRY-->
-        <div class="home-entry on-view-anim">
-            <h1>
-                <span>Serre Benoît</span>
-                <span class="keyword-container">Développeur <span id="animated-keyword"></span></span>
-            </h1>
-        </div>
-
-<!--        PRESENTATION SECTION-->
-        <section id="qui-suis-je" class="presentation-section container my-5 on-view-anim ">
-            <h2 class="text-center pb-4">Qui suis je ?</h2>
-            <div class="presentation-container">
-                <div class="presentation-shape1"></div>
-                <div class="presentation-shape2"></div>
-                <div class="image-container">
-                    <img loading="lazy" src="./images/corpped.jpg" alt="" class="">
-                </div>
-                <div class="text">
-                    <p><span aria-hidden="true">Initié au langage C++ pendant mon BTS, j’ai poursuivi mon apprentissage avec une licence en alternance, où j’ai acquis 3 ans d’expérience dans la création et la maintenance de sites webs, en utilisant des technologies telles que WordPress et React. J’ai également développé des compétences en back-end avec le framework .NET et ASP.NET. Actuellement, je cherche à améliorer mes compétences existantes et à en acquérir de nouvelles dans mon domaine.</span></p>
-                </div>
-            </div>
-        </section>
-
-<!--        EXPERIENCES-->
-        <section id="mes-formations" class="experiences-section container my-5 on-view-anim ">
-            <h2 class="text-center pb-4">Mes formations</h2>
-            <div class="timeline">
-                <div class="time-card on-view-anim ">
-                    <div class="info">
-                        <div class="py-2 px-3">
-                            <h3>Développeur concepteur logiciel (Back-end .NET)</h3>
-                            <p class="title">Openclassrooms</p>
-                            <div class="foldable-content" style="display: none;">
-                                Formation en alternance de développeur back-end spécialisé dans le langage C# / .NET.
-
-                                Cette formation est sous forme de scénarios professionnels à réaliser. Ces projets consistent en :
-
-                                &nbsp;
-                                <ul>
-                                    <li>Développement et refonte d'application</li>
-                                    <li>Design d'architecture technique</li>
-                                    <li>Implémentations de tests et debugage</li>
-                                    <li>Design de bases de données</li>
-                                    <li>Écriture de documentations</li>
-                                    <li>Analyse des besoins utilisateurs</li>
-                                    <li>Veille technologique</li>
-                                </ul>
-                                J'ai obtenu ce diplôme en Octobre 2023 (RNCP niveau 6).
-                            </div>
-                        </div>
-                        <button class="card-btn">
-                            <span>En savoir plus</span> <i data-feather='chevron-down'></i>
-                        </button>
-                    </div>
-                </div>
-                <div class="time-card on-view-anim ">
-                    <div class="info">
-                        <div class="py-2 px-3">
-                            <h3>BTS Systèmes Numériques Informatique et Réseaux (SNIR)</h3>
-                            <p class="title">Lycée Jean-Monnet-Mermoz Aurillac</p>
-                            <div class="foldable-content" style="display: none;">
-                                <span aria-hidden="true">Le BTS SNIR est un diplôme orienté sur les systèmes embarqués. Il y est enseignés des bases en réseaux , électronique et programmation principalement avec le langage C++ en programmation orienté objet. J'ai obtenu ce diplôme en 2020.</span>
-                            </div>
-                        </div>
-                        <button class="card-btn">
-                            <span>En savoir plus</span> <i data-feather='chevron-down'></i>
-                        </button>
-                    </div>
-                </div>
-                <div class="time-card on-view-anim ">
-                    <div class="info">
-                        <div class="py-2 px-3">
-                            <h3>BAC Professionel Systèmes Électroniques et Numeriques (SEN)</h3>
-                            <p class="title">Lycée Jean-Monnet-Mermoz Aurillac</p>
-                            <div class="foldable-content" style="display: none;">
-                                Bac professionnel réalisé à Aurillac. Le bac pro SEN (Systèmes Électroniques et Numériques) option télécommunication et réseaux est un diplôme orienté sur divers domaines comme : alarmes et sécurité, audiovisuel et multimédia, électrodomestique, réseaux et informatique. J'ai obtenu ce diplôme en 2018 avec mention bien.
-                            </div>
-                        </div>
-                        <button class="card-btn">
-                            <span>En savoir plus</span> <i data-feather='chevron-down'></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-<!--        SKILLS-->
-        <section id="mes-competences" class="technologies-list container my-5">
-            <h2 class="text-center pb-4">Mes Compétences</h2>
-            <div class="grid-container justify-content-center">
-                <div class="grid-item text-inside on-view-anim ">
-                    <img loading="lazy" src="./images/dotnet-logo.png" alt="" class="">
-                    .NET
-                </div>
-                <div class="grid-item colored-box on-view-anim "></div>
-                <div class="grid-item not-visible on-view-anim "></div>
-                <div class="grid-item text-inside on-view-anim ">
-                    <img loading="lazy" src="./images/asp-dot-net-mvc.png" alt="" class="">
-                    ASP.NET
-                </div>
-                <div class="grid-item colored-box on-view-anim "></div>
-                <div class="grid-item not-visible on-view-anim "></div>
-                <div class="grid-item text-inside on-view-anim ">
-                    <img loading="lazy" src="./images/css.png" alt="" class="">
-                    CSS
-                </div>
-                <div class="grid-item colored-box on-view-anim "></div>
-                <div class="grid-item not-visible on-view-anim "></div>
-                <div class="grid-item text-inside on-view-anim ">
-                    <img loading="lazy" src="./images/html.png" alt="" class="">
-                    HTML
-                </div>
-                <div class="grid-item colored-box on-view-anim "></div>
-                <div class="grid-item not-visible on-view-anim "></div>
-                <div class="grid-item text-inside on-view-anim ">
-                    <img loading="lazy" src="./images/javascript.png" alt="" class="">
-                    Javascript
-                </div>
-                <div class="grid-item colored-box on-view-anim "></div>
-                <div class="grid-item not-visible on-view-anim "></div>
-                <div class="grid-item text-inside on-view-anim ">
-                    <img loading="lazy" src="./images/php.png" alt="" class="">
-                    PHP
-                </div>
-                <div class="grid-item colored-box on-view-anim "></div>
-                <div class="grid-item not-visible on-view-anim "></div>
-                <div class="grid-item text-inside on-view-anim ">
-                    <img loading="lazy" src="./images/reactjs.png" alt="" class="">
-                    ReactJS
-                </div>
-                <div class="grid-item colored-box on-view-anim "></div>
-                <div class="grid-item not-visible on-view-anim "></div>
-                <div class="grid-item text-inside on-view-anim ">
-                    <img loading="lazy" src="./images/sass.png" alt="" class="">
-                    SASS
-                </div>
-                <div class="grid-item colored-box on-view-anim "></div>
-                <div class="grid-item not-visible on-view-anim "></div>
-                <div class="grid-item text-inside on-view-anim ">
-                    <img loading="lazy" src="./images/wordpress.png" alt="" class="">
-                    Wordpress
-                </div>
-                <div class="grid-item colored-box on-view-anim "></div>
-                <div class="grid-item not-visible on-view-anim "></div>
-                <div class="grid-item last-box"></div>
-            </div>
-        </section>
-
-<!--        PROJECTS-->
-        <section id="mes-projets" class="feature-section container my-5">
-            <h2 class="text-center pb-4 on-view-anim ">Mes Projets</h2>
-            <ul class="home-project-list row justify-content-center g-3">
-                <li class="home-project on-view-anim col-lg-4 col-sm-6 ">
-                    <div>
-                        <img loading="lazy" src="./images/carhub.png" alt="Car Hub" class="">
-                        <div class="home-project-overlay">
-                            <h3>Car Hub</h3>
-                        </div>
-                    </div>
-                </li>
-                <li class="home-project on-view-anim col-lg-4 col-sm-6 ">
-                    <div>
-                        <img loading="lazy" src="./images/ets.png" alt="ETS Dupleix" class="">
-                        <div class="home-project-overlay">
-                            <h3>ETS Dupleix (multisite)</h3>
-                        </div>
-                    </div>
-                </li>
-                <li class="home-project on-view-anim col-lg-4 col-sm-6 ">
-                    <div>
-                        <img loading="lazy" src="./images/californianhealth.png" alt="Californian Health" class="">
-                        <div class="home-project-overlay">
-                            <h3>Californian Health</h3>
-                        </div>
-                    </div>
-                </li>
-                <li class="home-project on-view-anim col-md-6 ">
-                    <div>
-                        <img loading="lazy" src="./images/modal.png" alt="Modal Média" class="">
-                        <div class="home-project-overlay">
-                            <h3>Modal Média</h3>
-                        </div>
-                    </div>
-                </li>
-                <li class="home-project on-view-anim col-md-6 ">
-                    <div>
-                        <img loading="lazy" src="./images/diva.png" alt="Digital Inovation Value Accelerator (DIVA)" class="">
-                        <div class="home-project-overlay">
-                            <h3>Digital Inovation Value Accelerator (DIVA)</h3>
-                        </div>
-                    </div>
-                </li>
-                <li class="home-project on-view-anim col-lg-4 col-sm-6 ">
-                    <div>
-                        <img loading="lazy" src="./images/mediscreen-home.png" alt="Mediscreen" class="">
-                        <div class="home-project-overlay">
-                            <h3>Mediscreen</h3>
-                        </div>
-                    </div>
-                </li>
-                <li class="home-project on-view-anim col-lg-4 col-sm-6 ">
-                    <div>
-                        <img loading="lazy" src="./images/ducale.png" alt="Jeux Ducale" class="">
-                        <div class="home-project-overlay">
-                            <h3>Jeux Ducale</h3>
-                        </div>
-                    </div>
-                </li>
-                <li class="home-project on-view-anim col-lg-4 col-sm-6 ">
-                    <div>
-                        <img loading="lazy" src="./images/les-loustics.png" alt="Les Lou-stics (UHU)" class="">
-                        <div class="home-project-overlay">
-                            <h3>Les Lou-stics (UHU)</h3>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </section>
-
-<!--        CONTACTS-->
-        <section id="me-contacter" class="contact-section container my-5 on-view-anim ">
-            <h2 class="text-center pb-4">Me Contacter</h2>
-            <div class="row g-0 contact-section-frame">
-                <div class="col-lg-7 resume on-view-anim">
-                    <div class="resume-overlay">
-                        <img src="./images/cv.png" alt="cv">
-                    </div>
-                    <div class="btn-group-resume">
-                        <span>Obtenir mon CV :</span>
-                        <a class="btn" target="_blank" href="https://openclassrooms.cvdesignr.com/p/652f9c533ba4b"><i data-feather='eye'></i> Voir mon CV</a>
-                        <a class="btn" href="./downloads/CV_Benoît_Serre_Développeur_Web.pdf" download="CV_Benoît_Serre_Développeur_Web"><i data-feather='download'></i> Télécharger mon CV</a>
-                    </div>
-                </div>
-                <ul class="col-lg-5 contact-links">
-                    <li class="on-view-anim">
-                        <a href="mailto:bserre15250@gmail.com"><i data-feather='mail'></i> bserre15250@gmail.com</a>
-                    </li>
-                    <li class="on-view-anim">
-                        <a class="nav-link" target="_blank" itemprop="url" href="https://www.linkedin.com/in/beno%C3%AEt-serre-453947295/" title="Linkedin"><i data-feather='linkedin'></i> Linkedin</a>
-                    </li>
-                    <li class="on-view-anim">
-                        <a class="nav-link" target="_blank" itemprop="url" href="https://github.com/BENBEN15" title="Github"><i data-feather='github'></i> Github</a>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
+    <div class="home-entry on-view-anim">
+        <h1>
+            <span>Serre Benoît</span>
+            <span class="keyword-container">Développeur <span id="animated-keyword"></span></span>
+        </h1>
     </div>
 
-<!--    FOOTER-->
-    <footer class="footer">
-        <div class="container justify-content-center align-items-center d-flex flex-sm-row flex-column">
-            <ul id="menu-footer" class="menu">
-                <li class="nav-item">
-                    <a class="nav-link" href="#qui-suis-je"><span itemprop="name">Qui suis je ?</span></a>
+<!--        PRESENTATION SECTION-->
+    <section id="qui-suis-je" class="presentation-section container my-5 on-view-anim ">
+        <h2 class="text-center pb-4">Qui suis je ?</h2>
+        <div class="presentation-container">
+            <div class="presentation-shape1"></div>
+            <div class="presentation-shape2"></div>
+            <div class="image-container">
+                <img loading="lazy" src="./images/corpped.jpg" alt="" class="">
+            </div>
+            <div class="text">
+                <p><span aria-hidden="true">Initié au langage C++ pendant mon BTS, j’ai poursuivi mon apprentissage avec une licence en alternance, où j’ai acquis 3 ans d’expérience dans la création et la maintenance de sites webs, en utilisant des technologies telles que WordPress et React. J’ai également développé des compétences en back-end avec le framework .NET et ASP.NET. Actuellement, je cherche à améliorer mes compétences existantes et à en acquérir de nouvelles dans mon domaine.</span></p>
+            </div>
+        </div>
+    </section>
+
+<!--        EXPERIENCES-->
+    <section id="mes-formations" class="experiences-section container my-5 on-view-anim ">
+        <h2 class="text-center pb-4">Mes formations</h2>
+        <div class="timeline">
+            <div class="time-card on-view-anim ">
+                <div class="info">
+                    <div class="py-2 px-3">
+                        <h3>Développeur concepteur logiciel (Back-end .NET)</h3>
+                        <p class="title">Openclassrooms</p>
+                        <div class="foldable-content" style="display: none;">
+                            Formation en alternance de développeur back-end spécialisé dans le langage C# / .NET.
+
+                            Cette formation est sous forme de scénarios professionnels à réaliser. Ces projets consistent en :
+
+                            &nbsp;
+                            <ul>
+                                <li>Développement et refonte d'application</li>
+                                <li>Design d'architecture technique</li>
+                                <li>Implémentations de tests et debugage</li>
+                                <li>Design de bases de données</li>
+                                <li>Écriture de documentations</li>
+                                <li>Analyse des besoins utilisateurs</li>
+                                <li>Veille technologique</li>
+                            </ul>
+                            J'ai obtenu ce diplôme en Octobre 2023 (RNCP niveau 6).
+                        </div>
+                    </div>
+                    <button class="card-btn">
+                        <span>En savoir plus</span> <i data-feather='chevron-down'></i>
+                    </button>
+                </div>
+            </div>
+            <div class="time-card on-view-anim ">
+                <div class="info">
+                    <div class="py-2 px-3">
+                        <h3>BTS Systèmes Numériques Informatique et Réseaux (SNIR)</h3>
+                        <p class="title">Lycée Jean-Monnet-Mermoz Aurillac</p>
+                        <div class="foldable-content" style="display: none;">
+                            <span aria-hidden="true">Le BTS SNIR est un diplôme orienté sur les systèmes embarqués. Il y est enseignés des bases en réseaux , électronique et programmation principalement avec le langage C++ en programmation orienté objet. J'ai obtenu ce diplôme en 2020.</span>
+                        </div>
+                    </div>
+                    <button class="card-btn">
+                        <span>En savoir plus</span> <i data-feather='chevron-down'></i>
+                    </button>
+                </div>
+            </div>
+            <div class="time-card on-view-anim ">
+                <div class="info">
+                    <div class="py-2 px-3">
+                        <h3>BAC Professionel Systèmes Électroniques et Numeriques (SEN)</h3>
+                        <p class="title">Lycée Jean-Monnet-Mermoz Aurillac</p>
+                        <div class="foldable-content" style="display: none;">
+                            Bac professionnel réalisé à Aurillac. Le bac pro SEN (Systèmes Électroniques et Numériques) option télécommunication et réseaux est un diplôme orienté sur divers domaines comme : alarmes et sécurité, audiovisuel et multimédia, électrodomestique, réseaux et informatique. J'ai obtenu ce diplôme en 2018 avec mention bien.
+                        </div>
+                    </div>
+                    <button class="card-btn">
+                        <span>En savoir plus</span> <i data-feather='chevron-down'></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!--        SKILLS-->
+    <section id="mes-competences" class="technologies-list container my-5">
+        <h2 class="text-center pb-4">Mes Compétences</h2>
+        <div class="grid-container justify-content-center">
+            <div class="grid-item text-inside on-view-anim ">
+                <img loading="lazy" src="./images/dotnet-logo.png" alt="" class="">
+                .NET
+            </div>
+            <div class="grid-item colored-box on-view-anim "></div>
+            <div class="grid-item not-visible on-view-anim "></div>
+            <div class="grid-item text-inside on-view-anim ">
+                <img loading="lazy" src="./images/asp-dot-net-mvc.png" alt="" class="">
+                ASP.NET
+            </div>
+            <div class="grid-item colored-box on-view-anim "></div>
+            <div class="grid-item not-visible on-view-anim "></div>
+            <div class="grid-item text-inside on-view-anim ">
+                <img loading="lazy" src="./images/css.png" alt="" class="">
+                CSS
+            </div>
+            <div class="grid-item colored-box on-view-anim "></div>
+            <div class="grid-item not-visible on-view-anim "></div>
+            <div class="grid-item text-inside on-view-anim ">
+                <img loading="lazy" src="./images/html.png" alt="" class="">
+                HTML
+            </div>
+            <div class="grid-item colored-box on-view-anim "></div>
+            <div class="grid-item not-visible on-view-anim "></div>
+            <div class="grid-item text-inside on-view-anim ">
+                <img loading="lazy" src="./images/javascript.png" alt="" class="">
+                Javascript
+            </div>
+            <div class="grid-item colored-box on-view-anim "></div>
+            <div class="grid-item not-visible on-view-anim "></div>
+            <div class="grid-item text-inside on-view-anim ">
+                <img loading="lazy" src="./images/php.png" alt="" class="">
+                PHP
+            </div>
+            <div class="grid-item colored-box on-view-anim "></div>
+            <div class="grid-item not-visible on-view-anim "></div>
+            <div class="grid-item text-inside on-view-anim ">
+                <img loading="lazy" src="./images/reactjs.png" alt="" class="">
+                ReactJS
+            </div>
+            <div class="grid-item colored-box on-view-anim "></div>
+            <div class="grid-item not-visible on-view-anim "></div>
+            <div class="grid-item text-inside on-view-anim ">
+                <img loading="lazy" src="./images/sass.png" alt="" class="">
+                SASS
+            </div>
+            <div class="grid-item colored-box on-view-anim "></div>
+            <div class="grid-item not-visible on-view-anim "></div>
+            <div class="grid-item text-inside on-view-anim ">
+                <img loading="lazy" src="./images/wordpress.png" alt="" class="">
+                Wordpress
+            </div>
+            <div class="grid-item colored-box on-view-anim "></div>
+            <div class="grid-item not-visible on-view-anim "></div>
+            <div class="grid-item last-box"></div>
+        </div>
+    </section>
+
+<!--        PROJECTS-->
+    <section id="mes-projets" class="feature-section container my-5">
+        <h2 class="text-center pb-4 on-view-anim ">Mes Projets</h2>
+        <ul class="home-project-list row justify-content-center g-3">
+            <li class="home-project on-view-anim col-lg-4 col-sm-6 ">
+                <div>
+                    <img loading="lazy" src="./images/carhub.png" alt="Car Hub" class="">
+                    <div class="home-project-overlay">
+                        <h3>Car Hub</h3>
+                    </div>
+                </div>
+            </li>
+            <li class="home-project on-view-anim col-lg-4 col-sm-6 ">
+                <div>
+                    <img loading="lazy" src="./images/ets.png" alt="ETS Dupleix" class="">
+                    <div class="home-project-overlay">
+                        <h3>ETS Dupleix (multisite)</h3>
+                    </div>
+                </div>
+            </li>
+            <li class="home-project on-view-anim col-lg-4 col-sm-6 ">
+                <div>
+                    <img loading="lazy" src="./images/californianhealth.png" alt="Californian Health" class="">
+                    <div class="home-project-overlay">
+                        <h3>Californian Health</h3>
+                    </div>
+                </div>
+            </li>
+            <li class="home-project on-view-anim col-md-6 ">
+                <div>
+                    <img loading="lazy" src="./images/modal.png" alt="Modal Média" class="">
+                    <div class="home-project-overlay">
+                        <h3>Modal Média</h3>
+                    </div>
+                </div>
+            </li>
+            <li class="home-project on-view-anim col-md-6 ">
+                <div>
+                    <img loading="lazy" src="./images/diva.png" alt="Digital Inovation Value Accelerator (DIVA)" class="">
+                    <div class="home-project-overlay">
+                        <h3>Digital Inovation Value Accelerator (DIVA)</h3>
+                    </div>
+                </div>
+            </li>
+            <li class="home-project on-view-anim col-lg-4 col-sm-6 ">
+                <div>
+                    <img loading="lazy" src="./images/mediscreen-home.png" alt="Mediscreen" class="">
+                    <div class="home-project-overlay">
+                        <h3>Mediscreen</h3>
+                    </div>
+                </div>
+            </li>
+            <li class="home-project on-view-anim col-lg-4 col-sm-6 ">
+                <div>
+                    <img loading="lazy" src="./images/ducale.png" alt="Jeux Ducale" class="">
+                    <div class="home-project-overlay">
+                        <h3>Jeux Ducale</h3>
+                    </div>
+                </div>
+            </li>
+            <li class="home-project on-view-anim col-lg-4 col-sm-6 ">
+                <div>
+                    <img loading="lazy" src="./images/les-loustics.png" alt="Les Lou-stics (UHU)" class="">
+                    <div class="home-project-overlay">
+                        <h3>Les Lou-stics (UHU)</h3>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+<!--        CONTACTS-->
+    <section id="me-contacter" class="contact-section container my-5 on-view-anim ">
+        <h2 class="text-center pb-4">Me Contacter</h2>
+        <div class="row g-0 contact-section-frame">
+            <div class="col-lg-7 resume on-view-anim">
+                <div class="resume-overlay">
+                    <img src="./images/cv.png" alt="cv">
+                </div>
+                <div class="btn-group-resume">
+                    <span>Obtenir mon CV :</span>
+                    <a class="btn" target="_blank" href="https://openclassrooms.cvdesignr.com/p/652f9c533ba4b"><i data-feather='eye'></i> Voir mon CV</a>
+                    <a class="btn" href="./downloads/CV_Benoît_Serre_Développeur_Web.pdf" download="CV_Benoît_Serre_Développeur_Web"><i data-feather='download'></i> Télécharger mon CV</a>
+                </div>
+            </div>
+            <ul class="col-lg-5 contact-links">
+                <li class="on-view-anim">
+                    <a href="mailto:bserre15250@gmail.com"><i data-feather='mail'></i> bserre15250@gmail.com</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#mes-formations"><span itemprop="name">Mes formations</span></a>
+                <li class="on-view-anim">
+                    <a class="nav-link" target="_blank" itemprop="url" href="https://www.linkedin.com/in/beno%C3%AEt-serre-453947295/" title="Linkedin"><i data-feather='linkedin'></i> Linkedin</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#mes-competences"><span itemprop="name">Mes compétences</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#mes-projets"><span itemprop="name">Mes projets</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#me-contacter"><span itemprop="name">Me contacter</span></a>
+                <li class="on-view-anim">
+                    <a class="nav-link" target="_blank" itemprop="url" href="https://github.com/BENBEN15" title="Github"><i data-feather='github'></i> Github</a>
                 </li>
             </ul>
         </div>
-        <div class="d-flex justify-content-center">
-            <p class="footer-label">Fait par <a target="_blank" href="https://github.com/BENBEN15">BENBEN15</a> à Aurillac</p>
-        </div>
-    </footer>
-</main>
+    </section>
+
+</div>
+
+<!--    FOOTER-->
+<footer class="footer">
+    <nav class="container justify-content-center align-items-center d-flex flex-sm-row flex-column">
+        <ul id="menu-footer" class="menu">
+            <li class="nav-item">
+                <a class="nav-link" href="#qui-suis-je">Qui suis je ?</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#mes-formations">Mes formations</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#mes-competences">Mes compétences</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#mes-projets">Mes projets</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#me-contacter">Me contacter</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="d-flex justify-content-center">
+        <p class="footer-label">Fait par <a target="_blank" href="https://github.com/BENBEN15">BENBEN15</a> à Aurillac</p>
+    </div>
+</footer>
 
 <script type="text/javascript" src="./dist/main.js" id="main_js-js"></script>
 
@@ -295,6 +323,8 @@
 <div class="body-shape body-shape-2"></div>
 <div class="body-shape body-shape-3"></div>
 <div class="body-shape body-shape-4"></div>
+
+</main>
 
 </body>
 </html>

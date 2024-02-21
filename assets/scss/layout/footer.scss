@@ -5,9 +5,8 @@ footer{
     box-shadow: $box-shadow;
     width: 100%;
     font-family: $font-raleway-thin;
-    font-size: 12px;
+    font-size: 14px;
 
-    padding-left: $header-width;
     @include media-breakpoint-down(md){
         padding-left: 0;
     }

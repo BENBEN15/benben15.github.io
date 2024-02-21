@@ -3,6 +3,9 @@
 //Libs
 import './libs/index'
 
+//Header
+import './header/index'
+
 //Home
 import './home/index'
 
