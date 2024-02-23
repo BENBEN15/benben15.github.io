@@ -6,15 +6,6 @@
 
 //Section spacing
 section{
-    margin-top: 75px;
+    margin-top: 50px;
     margin-bottom: 50px;
-
-    //sections anchor offset
-    &::before {
-        content: '';
-        display: block;
-        height:      75px;
-        margin-top: -75px;
-        visibility: hidden;
-    }
 }

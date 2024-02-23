@@ -1,50 +1,107 @@
 .feature-section{
+    overflow: hidden;
+    margin-bottom: 0;
     .home-project-list{
         list-style-type: none;
         padding: 0;
-        margin: 0;
+        margin: 50px 0 55px 0;
+
+        .slick-dots{
+            bottom: -50px;
+            li{
+                button{
+                    &:before{
+                        color: $white;
+                    }
+                }
+            }
+        }
+
+        .slick-arrow{
+            &.slick-next{
+                right: 25px;
+            }
+            &.slick-prev{
+                left: 25px;
+                z-index: 5;
+            }
+            &:before{
+                font-size: 30px;
+            }
+        }
+
+        .slick-list{
+            overflow: visible !important;
+            .slick-track{
+                .slick-slide{
+                    &.slick-current{
+                        .home-project{
+                            position: relative;
+                            z-index: 5;
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+            }
+        }
 
         .home-project{
-            div{
+            box-shadow: $default-box-shadow;
+            transition: $default-transition;
+            img{
+                height: 55vh;
+                width: 100%;
+                object-fit: cover;
+                transition: $default-transition;
+
+                @include media-breakpoint-down(lg){
+                    height: 40vh;
+                }
+                @include media-breakpoint-down(md){
+                    height: 35vh;
+                }
+            }
+
+            .home-project-overlay-content{
                 position: relative;
                 display: flex;
-                height: 100%;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: fit-content;
                 width: 100%;
-                overflow: hidden;
+                padding: 10px 5px;
+                background-color: $secondary-color;
+                text-align: center;
 
-                img{
-                    height: 100%;
-                    width: 100%;
-                    object-fit: cover;
-                    transition: $bezier-transition;
+                h3{
+                    font-size: 24px;
+                    font-family: $font-raleway-regular;
                 }
 
-                .home-project-overlay{
+                &:before{
+                    content: '';
                     position: absolute;
-                    display: flex;
-                    align-items: center;
-                    height: 100%;
+                    bottom: 100%;
                     width: 100%;
-                    background-color: rgba($black,0.6);
-                    transition: $transition-base;
-                    opacity: 0;
+                    box-shadow: 0 -4px 5px 10px $secondary-color;
+                }
 
+                @include media-breakpoint-down(lg){
                     h3{
-                        font-size: 24px;
-                        font-family: $font-raleway-regular;
-                        text-align: center;
-                        width: 100%;
-                        padding: 10px 5px;
-                        background: $default-gradient;
+                        font-size: 20px;
+                    }
+                    p{
+                        font-size: 14px;
                     }
                 }
 
-                &:hover{
-                    img{
-                        transform: scale(1.2);
+                @include media-breakpoint-down(md){
+                    h3{
+                        font-size: 16px;
                     }
-                    .home-project-overlay{
-                        opacity: 1;
+                    p{
+                        font-size: 12px;
                     }
                 }
             }

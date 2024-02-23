@@ -11,3 +11,7 @@ import './home/index'
 
 //Animations
 import './animations/index'
+
+//slick css
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
