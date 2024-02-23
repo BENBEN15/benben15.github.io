@@ -47,9 +47,10 @@
 
         .home-project{
             box-shadow: $default-box-shadow;
-            transition: $default-transition;
+            transition: $bezier-transition;
+
             img{
-                height: 55vh;
+                height: 50vh;
                 width: 100%;
                 object-fit: cover;
                 transition: $default-transition;
@@ -71,20 +72,13 @@
                 height: fit-content;
                 width: 100%;
                 padding: 10px 5px;
-                background-color: $secondary-color;
+                //background-color: $secondary-color;
+                background: $default-gradient;
                 text-align: center;
 
                 h3{
                     font-size: 24px;
                     font-family: $font-raleway-regular;
-                }
-
-                &:before{
-                    content: '';
-                    position: absolute;
-                    bottom: 100%;
-                    width: 100%;
-                    box-shadow: 0 -4px 5px 10px $secondary-color;
                 }
 
                 @include media-breakpoint-down(lg){

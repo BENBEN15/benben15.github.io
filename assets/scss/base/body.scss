@@ -1,51 +1,114 @@
 body {
     position: relative;
-    background: $secondary-color;
     min-height: 100vh;
-    //padding: 50px 0 0 0;
+
+    //Image background
+    background: url("../../images/code-background.jpg");
+    background-attachment: fixed;
+    background-position: top;
+    background-size: cover;
 
     //Typo
     color: $font-color;
     font-size: 16px;
     font-family: $font-roboto-regular;
 
+    //Overlay
+    &:before{
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: rgba($black,.3);
+        z-index: -1;
+        backdrop-filter: blur(8px);
+        transition: $bezier-transition;
+    }
+
+    //Shapes
     .body-shape{
         position: fixed;
         bottom: -25%;
         height: 150%;
         width: 150px;
-        transform: rotate(28deg);
+        transform: rotate(15deg);
         z-index: -1;
+        transition: $bezier-transition;
 
         &.body-shape-1{
+            left: 85vw;
+            width: 26vw;
             background-color: $primary-color;
-            width: 75px;
             box-shadow: $subtle-box-shadow;
         }
         &.body-shape-2{
+            left: -15vw;
+            width: 26vw;
+            filter: brightness(1.2);
             background-color: $tertiary-color;
-            width: 125px;
             box-shadow: $subtle-box-shadow;
         }
-        &.body-shape-3{
+        /*&.body-shape-3{
+            display: none;
             background-color: $primary-color;
             width: 200px;
             box-shadow: $subtle-box-shadow;
-        }
+        }*/
         &.body-shape-4{
-            background-color: $pop-color;
+            left: 18vw;
             width: 1px;
+            background-color: $pop-color;
             box-shadow: 0 0 6px 2px $pop-color;
+            @include glowing-effect($pop-color, 3s)
         }
 
-        @include standard-background-animation()
     }
 
-    &.single{
+    //Open state
+    &.open{
+        &:before{
+            backdrop-filter: blur(0px);
+        }
         .body-shape{
-            @include single-background-animation()
+            &.body-shape-1{
+                left: 100vw;
+            }
+            &.body-shape-2{
+                left: -25vw;
+            }
+            &.body-shape-4{
+                left: -10vw;
+            }
         }
+
     }
 
+    @include media-breakpoint-down(md){
+        .body-shape{
+            &.body-shape-1{
+                left: 100vw;
+            }
+            &.body-shape-2{
+                left: -25vw;
+            }
+            &.body-shape-4{
+                display: none;
+                left: 10vw;
+            }
+        }
+        &.open{
+            .body-shape{
+                &.body-shape-1{
+                    left: 140vw;
+                }
+                &.body-shape-2{
+                    left: -60vw;
+                }
+                &.body-shape-4{
+                    left: -35vw;
+                }
+            }
+        }
+    }
 }
 

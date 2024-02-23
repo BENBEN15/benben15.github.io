@@ -29,13 +29,16 @@
 
             &.text-inside{
                 flex-direction: column;
-                color: $font-color;
-                font-size: 16px;
-                font-family: $font-raleway-bold;
                 transition: $default-transition;
                 box-shadow: $subtle-box-shadow;
 
                 @include glassdoor-effect();
+
+                h3{
+                    color: $font-color;
+                    font-size: 16px;
+                    font-family: $font-raleway-bold;
+                }
 
                 img{
                     height: calc($square-size / 2);

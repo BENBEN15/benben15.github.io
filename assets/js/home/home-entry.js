@@ -1,4 +1,5 @@
 import TypeIt from "typeit";
+import $ from 'jquery'
 
 // Words
 const WordArray = [
@@ -32,3 +33,10 @@ if (animatedKeywordElement) {
     // Launch animation
     typer.go();
 }
+
+//Button scroll down
+$("#scroll-to-main").click(function (){
+    document.getElementById('qui-suis-je').scrollIntoView({
+        behavior: 'smooth'
+    });
+})
