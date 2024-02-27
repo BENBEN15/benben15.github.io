@@ -46,14 +46,12 @@
                     object-fit: contain;
                     margin-bottom: 5px;
                 }
+
+
             }
 
             &.not-visible {
                 visibility: hidden;
-            }
-
-            &.last-box{
-                @include glassdoor-effect();
             }
         }
     }

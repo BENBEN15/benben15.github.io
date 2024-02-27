@@ -19,7 +19,7 @@ body {
         position: absolute;
         height: 100%;
         width: 100%;
-        background-color: rgba($black,.3);
+        background-color: rgba($black,.5);
         z-index: -1;
         backdrop-filter: blur(8px);
         transition: $bezier-transition;
@@ -38,13 +38,14 @@ body {
         &.body-shape-1{
             left: 85vw;
             width: 26vw;
-            background-color: $primary-color;
+            //filter: brightness(1.2);
+            background-color: $secondary-color;
             box-shadow: $subtle-box-shadow;
         }
         &.body-shape-2{
             left: -15vw;
             width: 26vw;
-            filter: brightness(1.2);
+            filter: brightness(0.8);
             background-color: $tertiary-color;
             box-shadow: $subtle-box-shadow;
         }
@@ -67,7 +68,7 @@ body {
     //Open state
     &.open{
         &:before{
-            backdrop-filter: blur(0px);
+            backdrop-filter: blur(4px);
         }
         .body-shape{
             &.body-shape-1{

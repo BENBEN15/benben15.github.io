@@ -36,7 +36,13 @@ if (animatedKeywordElement) {
 
 //Button scroll down
 $("#scroll-to-main").click(function (){
-    document.getElementById('qui-suis-je').scrollIntoView({
-        behavior: 'smooth'
-    });
+    const element = document.getElementById('qui-suis-je')
+    const headerOffset = 80;
+    const elementPosition = element.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+    window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+    })
 })

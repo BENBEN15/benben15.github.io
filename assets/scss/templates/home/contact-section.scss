@@ -176,6 +176,7 @@
 
                         svg{
                             transform: scale(1.2) rotate(-33deg);
+                            @include svg-glow-effect($pop-color,.7);
                         }
                     }
                 }

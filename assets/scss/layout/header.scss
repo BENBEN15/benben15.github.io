@@ -97,6 +97,10 @@ header{
                         box-shadow: $default-box-shadow;
                         @include text-glowing-effect($pop-color);
 
+                        svg{
+                            @include svg-glow-effect($pop-color);
+                        }
+
                         &:before{
                             height: 3px;
                             @include glowing-effect($pop-color,3px,1s);
