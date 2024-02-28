@@ -8,7 +8,7 @@
     "build": "webpack --mode=production",
     "deploy": "gh-pages -d dist"
   },
-  "author": "",
+  "author": "BENBEN15",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.23.2",

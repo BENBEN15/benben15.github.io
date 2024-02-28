@@ -60,6 +60,14 @@ let config= {
                 generator: {
                     filename: './images/[name][ext]'
                 },
+            },
+            // images compilation
+            {
+                test: /\.(pdf)/,
+                type: 'asset/resource',
+                generator: {
+                    filename: './downloads/[name][ext]'
+                },
             }
         ]
     },
@@ -74,7 +82,7 @@ let config= {
         new HtmlWebpackPlugin({
             title: 'Serre Benoît - Développeur web',
             template: './src/index.html',
-            favicon: './assets/images/favicon.ico',
+            favicon: './src/images/favicon.ico',
             minify: false,
         }),
 
