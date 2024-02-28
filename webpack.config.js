@@ -81,7 +81,7 @@ let config= {
         //Html webpack plugin with configuration
         new HtmlWebpackPlugin({
             title: 'Serre Benoît - Développeur web',
-            template: './src/index.html',
+            template: './src/home.html',
             favicon: './src/images/favicon.ico',
             minify: false,
         }),
