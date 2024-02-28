@@ -32,8 +32,9 @@ let config= {
     devtool: false,
     entry: {
         main: [
-            './assets/js/app.js',
-            './assets/scss/global.scss'
+            './src/images',
+            './src/js/app.js',
+            './src/scss/global.scss'
         ]
     },
     output: {
@@ -102,7 +103,7 @@ module.exports = (env, argv) => {
         //Enable eslint
         config.plugins.push(new ESLintPlugin({
             extensions: ['js'],
-            context: './assets/js/app.js'
+            context: './src/js/app.js'
         }))
 
         //Add source-map
