@@ -12,21 +12,6 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const cssLoaders = [
     MiniCssExtractPlugin.loader,
     "css-loader",
-    // {
-    //     loader: "postcss-loader",
-    //     options: {
-    //         postcssOptions: {
-    //             plugins: [
-    //                 [
-    //                     "postcss-preset-env",
-    //                     {
-    //                         // Options
-    //                     },
-    //                 ],
-    //             ],
-    //         },
-    //     },
-    // },
 ]
 
 //Default config : prod
@@ -89,6 +74,7 @@ let config= {
         new HtmlWebpackPlugin({
             title: 'Serre Benoît - Développeur web',
             template: './src/index.html',
+            favicon: './assets/images/favicon.ico',
             minify: false,
         }),
 
