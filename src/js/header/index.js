@@ -1,4 +1,4 @@
-import $ from "jquery";
+
 
 const openClass = "open"
 const header = $("header")

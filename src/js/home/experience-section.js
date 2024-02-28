@@ -1,5 +1,3 @@
-import $ from "jquery";
-
 const openClass = "open"
 
 $(".time-card").each(function (i){

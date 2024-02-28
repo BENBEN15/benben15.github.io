@@ -1,5 +1,4 @@
 import TypeIt from "typeit";
-import $ from 'jquery'
 
 // Words
 const WordArray = [
