@@ -12,8 +12,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-
-    - name: Use Node.js
+    - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
         node-version: '20.x'
@@ -21,4 +20,12 @@ jobs:
       run: |
         yarn
         yarn build
+    - name: Deploy with gh-pages
+      env:
+        MY_EMAIL: bserre15250@gmail.com
+        MY_NAME: benben15
+      run: |
+        git config --global user.email $MY_EMAIL
+        git config --global user.name $MY_NAME
+        git remote set-url origin https://$MY_NAME:${{ secrets.GH_SECRET }}@github.com/BENBEN15/benben15.github.io.git
         yarn deploy
